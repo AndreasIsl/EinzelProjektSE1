@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="204dp"
+        android:layout_width="200dp"
         android:layout_height="76dp"
         android:layout_marginBottom="376dp"
         android:autofillHints=""
@@ -46,8 +46,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
         android:layout_marginTop="120dp"
         android:text="@string/gib_deine_matrikelnummer_ein"
         app:layout_constraintEnd_toEndOf="parent"
