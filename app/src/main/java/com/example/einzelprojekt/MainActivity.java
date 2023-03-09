@@ -20,11 +20,23 @@ public class MainActivity extends AppCompatActivity {
         TextView output = findViewById(R.id.result);
         EditText input = findViewById(R.id.editTextNumber);
 
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ConnectionThread cT = new ConnectionThread (input.getText().toString());
-                cT.start();
+
+                if (input.getText().toString().length() == 8) {
+                    ConnectionThread cT = new ConnectionThread (input.getText().toString());
+                    cT.start();
+                    try {
+                        cT.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    output.setText("" + cT.result);
+                } else {
+                    output.setText("Wrong Input");
+                }
             }
         });
 
