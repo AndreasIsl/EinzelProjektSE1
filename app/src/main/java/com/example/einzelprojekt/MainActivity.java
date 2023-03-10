@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         plainText.setTextSize(30f);
         output.setTextSize(30f);
-
+        input.setTextSize(30f);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 if (input.getText().toString().length() == 8) {
                     ConnectionThread cT = new ConnectionThread (input.getText().toString());
                     cT.start();
+                    try {
+                        cT.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                     output.setText("" + cT.getResult());
                 } else {
                     output.setText("Wrong Input");
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = 0 ; i < inputText.length(); i++){
                         sum +=( inputText.charAt(i) - 48);
                     }
-                    System.out.println(sum + "sum");
+
                     while (sum != 0){
                         strToRev += "" + sum % 2;
                         sum /= 2;
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         retVal += strToRev.charAt(i);
                     }
                     output.setText(retVal);
-                    System.out.println(retVal);
+
                 } else {
                     output.setText("Wrong Input");
                 }

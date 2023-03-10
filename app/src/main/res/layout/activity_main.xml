@@ -26,9 +26,10 @@
         android:text="@string/ergebnis"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -39,6 +40,7 @@
         android:contentDescription="Input für Matrikelnummer"
         android:ems="10"
         android:inputType="number"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -50,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:text="@string/gib_deine_matrikelnummer_ein"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

@@ -8,13 +8,13 @@ import java.net.Socket;
 
 public class ConnectionThread extends Thread{
     String input;
-    int result;
+    String result;
 
     public ConnectionThread(String input){
         this.input = input;
     }
 
-    public int getResult() {
+    public String getResult() {
         return result;
     }
 
@@ -27,8 +27,8 @@ public class ConnectionThread extends Thread{
             Socket clientSocket = new Socket("se2-isys.aau.at", 53212);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            outToServer.writeBytes(input);
-            result = inFromServer.read();
+            outToServer.writeBytes(input +'\n');
+            result = inFromServer.readLine();
             clientSocket.close();
 
 
