@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <person>
+        <name>Andreas Islitzer</name>
+        <matrikelnummer>12024003</matrikelnummer>
+        <lastcommithash>33070d48de4ad27ff9892d18514e8ed614488c8c</lastcommithash>
+        <githubusername>Andreasisl</githubusername>
+        <repositoryname>EinzelprojektSE1</repositoryname>
+        <repositoryurl>
+            https://github.com/AndreasIsl/EinzelProjektSE1
+        </repositoryurl>
+    </person>
+</PreferenceScreen>
